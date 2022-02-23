@@ -1,0 +1,13 @@
+<strong>Hi, User!</strong>
+<p>Current Date/Time is: {{currentDatetime}}</p>
+
+<p>Please enter your word below and click send button</p>
+<form action="listscores/" method="POST">{% csrf_token %}
+  <label>Word: </label>&nbsp;
+  <input type="text" name="inputWord" placeholder="Enter your word"/>
+  <input type="submit" value="Check Score"/>
+</form>
+
+<form action="displayscores/" method="POST">{% csrf_token %}
+  <input type="submit" value="List Scores"/>
+</form>

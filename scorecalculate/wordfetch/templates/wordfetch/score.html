@@ -1,0 +1,26 @@
+<strong>Hi, User! Current Date/Time is: {{ currentDatetime }}</strong>
+<p>Please find the score breakdown: </p>
+
+{% if inputWord %}
+<p>Input Word: {{ inputWord }}</p>
+{% endif %}
+
+{% if outputScore %}
+<p>Output Score: {{ outputScore }}</p>
+{% endif %}
+
+{% if scoreBreakdown %}
+<table border="1">
+  <tr>
+    <th>Word</th>
+    <th>Score</th>
+  <tr>
+{% for score in scoreBreakdown %}
+  <tr>
+    {% for item in score %}
+      <td>{{ item }}</td>
+    {% endfor %}
+  </tr>
+{% endfor %}
+</table>
+{% endif %}

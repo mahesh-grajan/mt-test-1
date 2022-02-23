@@ -1,0 +1,16 @@
+{% if previousList %}
+<table border="1">
+  <tr>
+    <th>Word</th>
+    <th>Score</th>
+    <th>Time</th>
+  <tr>
+{% for entry in previousList %}
+  <tr>
+    {% for item in entry %}
+      <td>{{ item }}</td>
+    {% endfor %}
+  </tr>
+{% endfor %}
+</table>
+{% endif %}
